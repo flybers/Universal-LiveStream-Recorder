@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><i>flybers</i> Universal Live Stream Recorder (Portable)</title>
+    <link rel="icon" type="image/x-icon" href="flybers.ico">
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #1e1e2f; color: #eee; }
+        code { font-family: 'Courier New', monospace; background: #0d0d1a; padding: 2px 6px; border-radius: 4px; }
+        .step { background: #2a2a3a; padding: 15px; border-radius: 8px; margin: 15px 0; }
+        h1 { color: #7c3aed; }
+        h1 i { color: #a78bfa; }
+        h2 { color: #a78bfa; }
+        hr { border-color: #3a3a4a; }
+        .tip { background: #2a3a2a; border-left: 4px solid #10b981; }
+        .warning { background: #3a2a2a; border-left: 4px solid #ef4444; }
+        .update-box { background: #2a2a3a; border: 1px solid #7c3aed; border-radius: 8px; padding: 15px; margin: 15px 0; }
+        .credits { background: #1a1a2a; border: 1px solid #4a4a5a; border-radius: 8px; padding: 15px; margin: 15px 0; text-align: center; }
+        .credits a { color: #a78bfa; text-decoration: none; }
+        .credits a:hover { text-decoration: underline; }
+        .donate { background: linear-gradient(135deg, #2a3a2a, #1a2a1a); border: 1px solid #10b981; border-radius: 8px; padding: 20px; margin: 20px 0; text-align: center; }
+        .donate-button { display: inline-block; background: #10b981; color: #1a1a2a; padding: 10px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px; }
+        .donate-button:hover { background: #14b8a6; }
+        .folder-tree { background: #0d0d1a; padding: 15px; border-radius: 8px; font-family: monospace; white-space: pre; overflow-x: auto; }
+        .legal { background: #1a1a2a; border: 1px solid #7c3aed; border-radius: 8px; padding: 15px; margin: 15px 0; }
+        .version { text-align: center; color: #888; margin-top: 5px; margin-bottom: 20px; }
+        .tool-card { background: #2a2a3a; border: 1px solid #7c3aed; border-radius: 8px; padding: 15px; margin: 15px 0; display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+        .tool-card a { color: #a78bfa; text-decoration: none; font-weight: bold; }
+        .tool-card a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1><i>flybers</i> Universal Live Stream Recorder (Portable)</h1>
+    <div class="version">Version 1.0 — May 2026</div>
+    <p>Drag and drop any streaming URL to watch AND record simultaneously. Works from any USB drive, any PC, no installation required.</p>
+    <hr>
+
+    <div class="step">
+        <h2>📌 How to use</h2>
+        <ol>
+            <li>Double-click <code>stream.exe</code> — a black terminal window will open</li>
+            <li>Drag a URL from your browser into the black window</li>
+            <li>Press Enter</li>
+            <li>mpv player opens — watch your stream</li>
+            <li><strong>To stop watching:</strong> Close the mpv player window</li>
+            <li><strong>To close the terminal:</strong> Click on the terminal window and press any key</li>
+        </ol>
+        <p><strong>Recording happens automatically</strong> while mpv is open. Close mpv to save the recording.</p>
+    </div>
+
+    <div class="step">
+        <h2>📂 Where recordings go</h2>
+        <p>Recordings are saved inside the tool folder, in a subfolder called <code>Recordings</code>:</p>
+        <div class="folder-tree">
+Your USB Drive (any letter)
+└── Universal_LiveStream_Recorder_Portable_v1.0\
+    ├── stream.exe          ← Double-click this to start
+    ├── updater.bat         ← Double-click this to update
+    ├── flybers.ico         ← Icon file (leave it here)
+    ├── Instructions.html   ← This guide
+    └── Recordings\         ← Your recordings go here
+         └── stream_2026-05-13_14-23-05.ts</div>
+        <p>The <code>Recordings</code> folder is created automatically the first time you run <code>stream.exe</code>. Works on any PC, any drive letter.</p>
+    </div>
+
+    <div class="step tip">
+        <h2>📺 Important: Adverts & Recording Behavior</h2>
+        <ul>
+            <li><strong>Static adverts on some streaming services:</strong> Some services will start with a static advert. Simply wait 20-30 seconds and the live feed will appear. Later, you can crop that section out with a simple video editor — cropping will also fix any time/duration display issues in the video file.</li>
+            <li><strong>Non-live (VOD) recordings:</strong> The recording will end automatically when the stream/video ends.</li>
+            <li><strong>Live stream recordings:</strong> The recording may NOT end automatically. To stop a live recording:</li>
+            <ul>
+                <li>Click on the black terminal window to select it</li>
+                <li>Hold down the <code>Ctrl</code> key and press <code>C</code> (<code>Ctrl+C</code>)</li>
+                <li>It may take a few seconds to register — be patient</li>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="tool-card">
+        <div>
+            <h2>✂️ Recommended Tool: LosslessCut</h2>
+            <p>After recording, you may want to trim adverts or fix duration display issues. <strong>LosslessCut</strong> is the perfect companion — it's free, portable, and cuts <code>.ts</code> files without re-encoding (no quality loss).</p>
+            <p><strong>Key features:</strong></p>
+            <ul>
+                <li>✅ Lossless trimming — cuts in seconds, no quality loss</li>
+                <li>✅ Portable — runs from USB drive, no installation</li>
+                <li>✅ Free & open source (GPL-2.0)</li>
+                <li>✅ Fixes duration display issues after cropping</li>
+                <li>✅ Can merge multiple recordings</li>
+                <li>✅ Extract audio or remove adverts</li>
+            </ul>
+            <p><strong>Download:</strong> <a href="https://losslesscut.net" target="_blank">https://losslesscut.net</a> (Windows x64 ~226 MB)</p>
+            <p><strong>Quick tip:</strong> After trimming your <code>.ts</code> recording with LosslessCut, the new file will have correct duration display in Windows Explorer.</p>
+        </div>
+    </div>
+
+    <div class="update-box">
+        <h2>🔄 How to update (Important!)</h2>
+        <p>Websites change constantly. Keep your tools updated or streams may stop working.</p>
+        <p><strong>To update:</strong> Double-click <code>updater.bat</code> inside the tool folder.</p>
+        <p>That's it — it automatically updates everything. Run this every few weeks.</p>
+    </div>
+
+    <div class="step tip">
+        <h2>⚡ Troubleshooting</h2>
+        <ul>
+            <li><strong>"mpv.exe not found"</strong> → Make sure <code>stream.exe</code> is inside the tool folder (where <code>mpv.exe</code> lives)</li>
+            <li><strong>403 error / stream won't play</strong> → Close your browser completely, then run <code>updater.bat</code> and try again</li>
+            <li><strong>File shows weird duration in Windows</strong> → Normal for <code>.ts</code> files. Use LosslessCut to trim/crop — this will fix the duration display.</li>
+            <li><strong>mpv takes a long time to open</strong> → If you're using a VPN, try disconnecting it temporarily. VPNs add latency which slows down stream negotiation. First launch after update is also slower.</li>
+            <li><strong>A site doesn't work</strong> → Run <code>updater.bat</code> first. If still broken, the site may not be supported yet.</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h2>🌐 What works great</h2>
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid #3a3a4a;"><td style="padding: 8px 0;">YouTube</td><td>✅ Perfect</td></tr>
+            <tr style="border-bottom: 1px solid #3a3a4a;"><td style="padding: 8px 0;">Facebook Live</td><td>✅ Works</td></tr>
+            <tr style="border-bottom: 1px solid #3a3a4a;"><td style="padding: 8px 0;">Twitter/X</td><td>✅ Works</td></tr>
+            <tr style="border-bottom: 1px solid #3a3a4a;"><td style="padding: 8px 0;">Vimeo</td><td>✅ Works</td></tr>
+            <tr style="border-bottom: 1px solid #3a3a4a;"><td style="padding: 8px 0;">Educational sites (MIT, Khan Academy, etc.)</td><td>✅ Works</td></tr>
+            <tr style="border-bottom: 1px solid #3a3a4a;"><td style="padding: 8px 0;">Public domain / government streams</td><td>✅ Works</td></tr>
+            <tr><td style="padding: 8px 0;">And 1,800+ more...</td><td>✅ Most major streaming sites</td></tr>
+        </table>
+        <p>If a site works in your browser, it will probably work here. Run <code>updater.bat</code> regularly to keep support for new sites.</p>
+    </div>
+
+    <div class="legal">
+        <h2>⚖️ Legal & Responsible Use</h2>
+        <p><strong>Perfectly legal uses include:</strong></p>
+        <ul>
+            <li>✅ Recording <strong>your own live streams</strong> (your content, your rights)</li>
+            <li>✅ Recording <strong>public domain or Creative Commons</strong> content</li>
+            <li>✅ Recording <strong>educational lectures</strong> for personal study</li>
+            <li>✅ Recording <strong>government proceedings or public broadcasts</strong></li>
+            <li>✅ Recording content where you have <strong>explicit permission</strong> from the creator</li>
+        </ul>
+        <p><strong>Users are responsible for:</strong></p>
+        <ul>
+            <li>Respecting copyright laws in their jurisdiction</li>
+            <li>Complying with platform Terms of Service</li>
+            <li>Obtaining necessary permissions for non-public content</li>
+            <li>Not using recordings for harassment, stalking, or commercial infringement</li>
+        </ul>
+        <p style="margin-top: 15px;"><strong>⚠️ USE AT YOUR OWN RISK.</strong> This tool is provided "as is" without warranty. The creator assumes no liability for how users choose to use it. By using this tool, you acknowledge that you are solely responsible for your actions.</p>
+    </div>
+
+    <div class="credits">
+        <h2>🙏 Credits & Thanks</h2>
+        <p>This tool would not exist without these amazing open-source projects:</p>
+        <p>
+            <strong><a href="https://mpv.io/" target="_blank">mpv player</a></strong> — The powerful, elegant video player<br>
+            <strong><a href="https://github.com/yt-dlp/yt-dlp" target="_blank">yt-dlp</a></strong> — The swiss army knife of video extraction<br>
+            <strong><a href="https://ffmpeg.org/" target="_blank">FFmpeg</a></strong> — The backbone of multimedia processing<br>
+            <strong><a href="https://losslesscut.net" target="_blank">LosslessCut</a></strong> — Lossless video trimming and editing
+        </p>
+        <p>Huge respect to all their developers and contributors. This tool is simply a convenient wrapper around their incredible work.</p>
+    </div>
+
+    <div class="donate">
+        <h2>☕ Support This Project</h2>
+        <p>If you find this tool useful, consider supporting further development.</p>
+        <a href="https://ko-fi.com/flybers" class="donate-button" target="_blank">Support on Ko-fi</a>
+        <p style="font-size: 12px; margin-top: 10px;">(Ko-fi has no fees — your support goes entirely to the creator)</p>
+    </div>
+
+    <div class="step tip">
+        <h2>💡 Tips</h2>
+        <ul>
+            <li><strong>Run updater.bat every few weeks</strong> — one click keeps everything working</li>
+            <li><strong>Close mpv player</strong> to stop watching and save your recording</li>
+            <li><strong>Click terminal window + any key</strong> to close it after mpv is closed</li>
+            <li><strong>The whole folder is portable</strong> — copy to any USB drive and it works on any Windows PC</li>
+            <li><strong>Keep a backup</strong> — save the entire tool folder somewhere safe</li>
+            <li><strong>Recordings are .ts files</strong> — they play in Windows Media Player, VLC, or any video player</li>
+            <li><strong>First launch after update may be slower</strong> — this is normal</li>
+            <li><strong>VPN users:</strong> Disconnecting your VPN temporarily may speed up stream loading</li>
+            <li><strong>Use LosslessCut</strong> to trim adverts and fix file duration display issues</li>
+        </ul>
+    </div>
+
+    <hr>
+    <p style="text-align: center; color: #888;">Drag any URL → Watch → Close → Recorded. Fully portable. Zero installation.</p>
+    <p style="text-align: center; color: #666; font-size: 12px;">Created by <i>flybers</i> — Free. Open. Always.</p>
+</body>
+</html>
